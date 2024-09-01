@@ -1,6 +1,7 @@
 ﻿
 using GuessMaster.Utilities;
 
+Console.Clear();
 WelcomeText();
 Console.WriteLine("\nPlease enter your name : ");
 var playerName = Console.ReadLine();
