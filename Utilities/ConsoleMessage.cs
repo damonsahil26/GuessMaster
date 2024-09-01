@@ -11,21 +11,21 @@ namespace GuessMaster.Utilities
         public static void PrintInfoMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n" + message + "\n");
+            Console.WriteLine("\n" + message);
             Console.ResetColor();
         }
 
         public static void PrintErrorMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\n" + message + "\n");
+            Console.WriteLine("\n" + message);
             Console.ResetColor();
         }
 
         public static void PrintCommandMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\n" + message + "\n");
+            Console.WriteLine("\n" + message);
             Console.ResetColor();
         }
 
@@ -42,6 +42,20 @@ namespace GuessMaster.Utilities
             Console.WriteLine("\n" + count + ". ");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(message);
+            Console.ResetColor();
+        }
+
+        public static void PrintCongratulatoryMessage(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(message);
+            Console.ResetColor();
+        }
+
+        public static void PrintPlayerNameMessage(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("\n" + message);
             Console.ResetColor();
         }
     }
