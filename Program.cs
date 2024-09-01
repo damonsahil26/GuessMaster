@@ -50,7 +50,7 @@ while (true)
     ConsoleMessage.PrintMessage($"Lets start the game :)");
     ConsoleMessage.PrintInfoMessage("I'm thinking of a number between 1 and 30.");
     int count = 0;
-
+    bool winner = false;
     while (count < totalTries)
     {
         var chancesLeft = totalTries - count;
@@ -74,6 +74,8 @@ while (true)
             ConsoleMessage.PrintCongratulatoryMessage("*  You've guessed the right number!  *");
             ConsoleMessage.PrintCongratulatoryMessage("*                                    *");
             ConsoleMessage.PrintCongratulatoryMessage("**************************************");
+            winner = true;
+            break;
         }
         else
         {
@@ -83,7 +85,7 @@ while (true)
         count++;
     }
 
-    PrintGameOverMessage();
+    if(!winner) PrintGameOverMessage();
     break;
 }
 
@@ -96,6 +98,7 @@ void PrintGameOverMessage()
     Console.WriteLine("*            GAME OVER!                *");
     Console.WriteLine("*                                      *");
     Console.WriteLine("*    You've run out of chances.        *");
+    Console.WriteLine($"*     The correct number was {answer}.       *");
     Console.WriteLine("*     Please restart the game.         *");
     Console.WriteLine("*                                      *");
     Console.WriteLine("****************************************");
